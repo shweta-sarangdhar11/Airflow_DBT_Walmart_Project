@@ -1,0 +1,23 @@
+models:
+  - name: products_t
+    columns:
+      - name: product_id
+        data_tests:
+          - not_null
+          - unique
+        config:
+          where: "price > 0"
+
+      - name: price
+        data_tests:
+          - dbt_utils.accepted_range:
+              arguments:
+                min_value: 0
+                inclusive: false
+
+  - name: orders_t
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
