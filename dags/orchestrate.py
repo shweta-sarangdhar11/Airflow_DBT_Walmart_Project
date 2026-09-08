@@ -103,7 +103,8 @@ def orchestrate():
 
         cwd='/opt/airflow/walmart_project',
 
-        bash_command='dbt test --select silver_b'
+        #bash_command='dbt test --select silver_b'
+        bash_command='dbt run --select silver_b'
 
     )
 
