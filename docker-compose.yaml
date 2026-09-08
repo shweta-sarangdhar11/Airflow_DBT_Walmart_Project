@@ -4,8 +4,10 @@ x-airflow-common:
   &airflow-common
 
   build:
-   context: ..
-   dockerfile: Airflow/Dockerfile
+   context: .
+   dockerfile: Dockerfile
+   #dockerfile: Airflow/Dockerfile
+   
 
   env_file:
     - ${ENV_FILE_PATH:-.env}

@@ -13,3 +13,4 @@ wheels/
 
 # Airflow generated files
 logs/
+config/
