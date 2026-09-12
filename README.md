@@ -26,7 +26,7 @@ This project demonstrates an end-to-end data engineering workflow using:
 
 The pipeline follows a layered transformation approach from source data through technical and business transformations into curated Gold models.
 
-> **Implementation Note:** The repository does not document a specific mechanism for transferring PostgreSQL data into the Databricks Bronze layer. Therefore, this README does not claim a specific JDBC, S3, CDC platform, or other transfer technology that is not implemented or documented in the repository.
+> **Implementation Note:** PostgreSQL source data is ingested into the `walmart.bronze` layer through a configured Databricks ingestion job. The Airflow `ingest_cdc` task triggers and monitors the Databricks job using the Databricks SDK.
 
 ---
 
